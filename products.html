@@ -2,51 +2,160 @@
 <html lang="zxx">
 
 <head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
-    <title>Achariya Dairy</title>
-	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
-	<!-- Google Fonts Css-->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Achariya Dairy - Premium dairy products from grass-fed cows, farm-fresh milk, paneer, sweets, and traditional masalas">
+    <meta name="keywords" content="dairy products, fresh milk, paneer, sweets, masalas, achariya dairy">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>Achariya Dairy | Premium Dairy Products</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&amp;display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
-	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<!-- Font Awesome Icon Css-->
-	<link href="css/all.min.css" rel="stylesheet" media="screen">
-	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
-	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    
+    <style>
+        /* Product Card Enhancements - Ensuring consistency with site theme */
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .product-badge {
+            background: rgba(249, 180, 58, 0.15);
+            border-radius: 40px;
+            padding: 5px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #f9b43a;
+            display: inline-block;
+            margin-bottom: 15px;
+            backdrop-filter: blur(2px);
+        }
+        
+        /* Dark section override for product consistency */
+        .dark-section {
+            background: #0a2a1f;
+        }
+        
+        /* Product CTA Box styling */
+        .product-cta-box {
+            background: linear-gradient(135deg, #1e4a32 0%, #0b2b1e 100%);
+            border-radius: 24px;
+            padding: 32px 28px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(249, 180, 58, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .product-cta-box:hover {
+            transform: translateY(-6px);
+            border-color: #f9b43a;
+        }
+        
+        .product-cta-box-info h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #f9b43a;
+            margin-bottom: 12px;
+        }
+        
+        .product-cta-box-info h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        
+        .product-cta-box-info p {
+            color: #cfdfd7;
+            margin-bottom: 20px;
+        }
+        
+        .btn-outline-light {
+            background: rgba(255, 255, 255, 0.08);
+            color: #f9b43a;
+            border: 1px solid #f9b43a;
+            width: 100%;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline-light:hover {
+            background: #f9b43a;
+            color: #0a2a1f;
+        }
+        
+        /* Feature list for products */
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        
+        .product-feature {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #cfdfd7;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .product-cta-box-info h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Preloader Start -->
-	<div class="preloader">
-		<div class="loading-container">
-			<div class="loading"></div>
-			<div id="loading-icon"><img src="images/logo.png" alt=""></div>
-		</div>
-	</div>
-	<!-- Preloader End -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="images/logo.png" alt=""></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
 
     <!-- Header Start -->
-	<header class="main-header">
+    <header class="main-header">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
@@ -62,9 +171,9 @@
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
+                                </li>
                                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-
-
+                                <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
@@ -82,32 +191,32 @@
             <div class="responsive-menu"></div>
         </div>
     </header>
-	<!-- Header End -->
+    <!-- Header End -->
 
     <!-- Page Header Start -->
-	<div class="page-header parallaxie">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- Page Header Box Start -->
-					<div class="page-header-box">
-						<h1 class="text-anime-style-3" data-cursor="-opaque">Our products</h1>
-						<nav class="wow fadeInUp">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Our products</li>
-							</ol>
-						</nav>
-					</div>
-					<!-- Page Header Box End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Page Header End -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our Products</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Our Products</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
     <!-- Scrolling Ticker Section Start -->
-     <div class="our-scrolling-ticker">
+    <div class="our-scrolling-ticker">
         <!-- Scrolling Ticker Start -->
         <div class="scrolling-ticker-box">
             <div class="scrolling-content">
@@ -144,138 +253,180 @@
     </div>
     <!-- Scrolling Ticker Section End -->
 
-    <!-- Page Services Section Start -->
- <div class="our-services dark-section">
+    <!-- Products Section Start - Premium Dairy Products Showcase (No Pricing, No Shop Buttons) -->
+    <div class="our-services dark-section">
         <div class="container">
             <div class="row services-list">
+                <!-- Left content: section title + button -->
                 <div class="col-lg-4 col-md-6">
                     <div class="our-service-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">our services</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Complete support for dairy
-                                entrepreneurs</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">From financing to processing and branding,
-                                Achariya Dairy Mitra provides end-to-end solutions for rural dairy entrepreneurs.</p>
+                            <h3 class="wow fadeInUp">premium dairy range</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Farm-fresh goodness, crafted for purity</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Explore our range of high-quality dairy products — from pure milk and traditional sweets to artisanal masalas and pickles. Directly sourced and processed with care.</p>
                         </div>
                         <!-- Section Title End -->
 
-                        <!-- Our Service Button Start -->
+                        <!-- View All Products Button Start - Keeping as info link -->
                         <div class="our-service-button wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="services.html" class="btn-default btn-highlighted">view all services</a>
+                            <a href="products.html" class="btn-default btn-highlighted">explore collection</a>
                         </div>
-                        <!-- Our Service Button End -->
+                        <!-- View All Products Button End -->
                     </div>
                 </div>
 
+                <!-- Product Card 1: A2 Buffalo Milk -->
                 <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item active wow fadeInUp">
+                    <div class="service-item active wow fadeInUp product-card">
                         <div class="icon-box">
-                            <img src="images/icon-service-1.svg" alt="">
+                            <i class="fas fa-jug fa-3x" style="color: #f9b43a;"></i>
                         </div>
                         <div class="service-item-content">
-                            <h3><a href="service-single.html">Buffalo Financing Support</a></h3>
-                            <p>Easy financing for buffalo procurement with 6% p.a. interest and 6-month moratorium. No
-                                PMU commission, making it affordable for rural entrepreneurs.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
+                            <div class="product-badge">❤️ Farm Fresh</div>
+                            <h3><a href="product-single.html">A2 Buffalo Milk</a></h3>
+                            <p>Rich, creamy & unadulterated buffalo milk sourced from happy grazing herds. High fat content perfect for sweets, tea & daily nutrition. Delivered chilled with utmost care to preserve natural goodness.</p>
+                            <div class="product-features">
+                                <span class="product-feature">100% Pure</span>
+                                <span class="product-feature">No Adulteration</span>
+                                <span class="product-feature">A2 Protein</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Service Item End -->
                 </div>
 
+                <!-- Product Card 2: Fresh Paneer & Curd -->
                 <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item wow fadeInUp product-card" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="images/icon-service-2.svg" alt="">
+                            <i class="fas fa-cheese fa-3x" style="color: #f9b43a;"></i>
                         </div>
                         <div class="service-item-content">
-                            <h3><a href="service-single.html">Central Processing & Logistics</a></h3>
-                            <p>Company vehicle picks up milk from your hub. Central unit processes it into fresh dairy
-                                products, sweets, masale, and aachar for local sale.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
+                            <div class="product-badge">⭐ Protein Rich</div>
+                            <h3><a href="product-single.html">Artisan Paneer & Curd</a></h3>
+                            <p>Soft, velvety paneer cubes and creamy hung curd made using traditional method. No preservatives, perfect for savoury dishes or desserts. Made fresh daily.</p>
+                            <div class="product-features">
+                                <span class="product-feature">Fresh Daily</span>
+                                <span class="product-feature">No Preservatives</span>
+                                <span class="product-feature">High Protein</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Service Item End -->
                 </div>
 
+                <!-- Product Card 3: Traditional Sweets Collection -->
                 <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item wow fadeInUp product-card" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="images/icon-service-3.svg" alt="">
+                            <i class="fas fa-candy-cane fa-3x" style="color: #f9b43a;"></i>
                         </div>
                         <div class="service-item-content">
-                            <h3><a href="service-single.html">Branding, Packaging & Supply</a></h3>
-                            <p>We provide branded packaging for milk, sweets, and other products. Consistent quality and
-                                presentation to build customer trust.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
+                            <div class="product-badge">🎉 Festive Special</div>
+                            <h3><a href="product-single.html">Desi Sweets Collection</a></h3>
+                            <p>Authentic kalakand, milk cake, gulab jamun & peda. Made with pure desi ghee and organic khoya. Tastes just like home, bringing traditional flavours to your celebration.</p>
+                            <div class="product-features">
+                                <span class="product-feature">Desi Ghee</span>
+                                <span class="product-feature">Organic Khoya</span>
+                                <span class="product-feature">Traditional Recipe</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Service Item End -->
                 </div>
 
+                <!-- Product Card 4: Pure Masalas & Pickles -->
                 <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item wow fadeInUp product-card" data-wow-delay="0.6s">
                         <div class="icon-box">
-                            <img src="images/icon-service-4.svg" alt="">
+                            <i class="fas fa-mortar-pestle fa-3x" style="color: #f9b43a;"></i>
                         </div>
                         <div class="service-item-content">
-                            <h3><a href="service-single.html">Training & Technical Assistance</a></h3>
-                            <p>Complete training on dairy management, hygiene, collection practices, and sales.
-                                Certification provided to build credibility.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
+                            <div class="product-badge">🌿 Natural Blend</div>
+                            <h3><a href="product-single.html">Pure Masalas & Pickles</a></h3>
+                            <p>Authentic dairy sidekicks: homemade aachar (mango, lemon, mix) and signature garam masala, and chai masala. No added colours or artificial flavours.</p>
+                            <div class="product-features">
+                                <span class="product-feature">No Added Colour</span>
+                                <span class="product-feature">Handmade</span>
+                                <span class="product-feature">Authentic Taste</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Service Item End -->
                 </div>
 
+                <!-- Product CTA Box: Dairy Lovers Combo (Informational - No Pricing) -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-cta-box wow fadeInUp" data-wow-delay="0.8s">
-                        <!-- Service Content Info Start -->
-                        <div class="service-cta-box-info">
-                            <h3>Start Your Dairy Business Today</h3>
-                            <h2>Low investment. High returns. Full support.</h2>
+                    <div class="product-cta-box wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="product-cta-box-info">
+                            <h3>🔥 Special Offer</h3>
+                            <h2>Dairy Lovers Combo</h2>
+                            <p>Experience the best of Achariya Dairy with our curated combo featuring fresh milk, artisan paneer, and traditional sweets. Perfect for families who value quality and taste.</p>
+                            <div class="product-features" style="margin-top: 10px;">
+                                <span class="product-feature">Free Delivery*</span>
+                                <span class="product-feature">Weekly Subscription</span>
+                                <span class="product-feature">Farm Fresh</span>
+                            </div>
                         </div>
-                        <!-- Service Content Info End -->
-
-                        <!-- Contact Now Box Start -->
-                        <div class="contact-now-box">
+                        <div class="contact-now-box" style="background: rgba(255,255,255,0.05); border-radius: 60px; padding: 12px 20px; display: flex; align-items: center; gap: 18px; margin-top: 20px;">
                             <div class="icon-box">
-                                <img src="images/icon-phone-white.svg" alt="">
+                                <i class="fas fa-truck-fast fa-2x" style="color: #f9b43a;"></i>
                             </div>
                             <div class="contact-now-box-content">
-                                <p>Call Us 24/7</p>
+                                <p>Order Hotline / WhatsApp</p>
                                 <h3><a href="tel:+919991777717">+91 99917-77717</a></h3>
                             </div>
                         </div>
-                        <!-- Contact Now Box End -->
                     </div>
                 </div>
 
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="1s">
-                        <p><span>free</span>Join as a Dairy Mitra partner today. <a href="contact.html">Get free
-                                consultation</a></p>
+                <!-- Additional Product Card 5: Pure Desi Ghee -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item wow fadeInUp product-card" data-wow-delay="0.3s">
+                        <div class="icon-box">
+                            <i class="fas fa-oil-can fa-3x" style="color: #f9b43a;"></i>
+                        </div>
+                        <div class="service-item-content">
+                            <div class="product-badge">✨ Liquid Gold</div>
+                            <h3><a href="product-single.html">Pure Desi Ghee</a></h3>
+                            <p>Traditional bilona method ghee made from A2 milk. Rich aroma, grainy texture, and loaded with essential nutrients. Perfect for cooking, frying, and Ayurvedic preparations.</p>
+                            <div class="product-features">
+                                <span class="product-feature">Bilona Method</span>
+                                <span class="product-feature">A2 Ghee</span>
+                                <span class="product-feature">No Additives</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Section Footer Text End -->
+                </div>
+
+                <!-- Additional Product Card 6: Flavoured Lassi & Buttermilk -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item wow fadeInUp product-card" data-wow-delay="0.5s">
+                        <div class="icon-box">
+                            <i class="fas fa-blender fa-3x" style="color: #f9b43a;"></i>
+                        </div>
+                        <div class="service-item-content">
+                            <div class="product-badge">🥤 Refreshing</div>
+                            <h3><a href="product-single.html">Flavoured Lassi & Chaas</a></h3>
+                            <p>Traditional buttermilk and creamy lassi in authentic flavours. Mango, rose, salted, and masala chaas. Perfect summer refreshment made with fresh curd.</p>
+                            <div class="product-features">
+                                <span class="product-feature">Probiotic Rich</span>
+                                <span class="product-feature">Natural Flavours</span>
+                                <span class="product-feature">Traditional Recipe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Promo Text - Informational Only -->
+                <div class="col-lg-12">
+                    <div class="section-footer-text wow fadeInUp" data-wow-delay="1s">
+                        <p><span>quality assured</span> All our products are FSSAI certified and made with love. <a href="contact.html">Contact us for bulk orders & delivery →</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Page Services Section End -->
-   <!-- Page Contact Us Start -->
+    <!-- Products Section End -->
+
+    <!-- Page Contact Us Start -->
     <div class="page-contact-us">
         <div class="container">
             <div class="row align-items-center">
@@ -335,17 +486,16 @@
                             <div class="contact-social-links wow fadeInUp" data-wow-delay="0.8s">
                                 <h3>Follow Us Today :</h3>
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="https://www.facebook.com/myachariya/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/Achariyagroup"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://x.com/Achariyagroup"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Contact Social List End -->
                         </div>
                         <!-- Contact Info Box End -->
                     </div>
-                    <!-- Contact Us Content End -->                       
+                    <!-- Contact Us Content End -->
                 </div>
 
                 <div class="col-lg-6">
@@ -360,7 +510,7 @@
                         <!-- Contact Form Start -->
                         <div class="contact-form">
                             <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="row">                                
+                                <div class="row">
                                     <div class="form-group col-md-6 mb-4">
                                         <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required>
                                         <div class="help-block with-errors"></div>
@@ -372,7 +522,7 @@
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="email" name ="email" class="form-control" id="email" placeholder="Email" required>
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
@@ -401,6 +551,7 @@
         </div>
     </div>
     <!-- Page Contact Us End -->
+
     <!-- Footer Section Start -->
     <footer class="main-footer dark-section">
         <div class="container">
@@ -427,7 +578,7 @@
                     </div>
                     <!-- Footer Newsletter Box End -->
                 </div>
-                
+
                 <div class="col-lg-6">
                     <!-- Footer Links List Start -->
                     <div class="footer-link-list">
@@ -478,7 +629,7 @@
                             <img src="images/footer-logo.png" alt="">
                         </div>
                         <!-- Footer Logo End -->
-                    
+
                         <!-- Footer Contact Box Start -->
                         <div class="footer-contact-box">
                             <!-- Footer Contact Item Start -->
@@ -515,8 +666,8 @@
                     <div class="col-md-7">
                         <!-- Footer Menu Start -->
                         <div class="footer-menu">
-                          <ul>
-                                <li><a target="_blank" href="https://www.linkedin.com/checkpoint/challengesV2/AQGO1fmhPZEIlwAAAZ4c6IcQd9fDFSZwbHVdGjU8meF9PoRvhyNJB8ZWpq90txjRPBxmHElVD2ii1WHzoU77EKYR0bt0VRd5uw?ut=0xBhHgH_dtkIg1">LinkedIn</a></li>
+                            <ul>
+                                <li><a target="_blank" href="https://www.linkedin.com/company/achariya">LinkedIn</a></li>
                                 <li><a target="_blank" href="https://www.facebook.com/myachariya/">Facebook</a></li>
                                 <li><a target="_blank" href="https://www.instagram.com/Achariyagroup">Instagram</a></li>
                                 <li><a target="_blank" href="https://x.com/Achariyagroup">Twitter</a></li>
