@@ -6189,7 +6189,7 @@ footer.main-footer{
 	}
 
 	.hero::before{
-		background: linear-gradient(0deg, rgba(24, 85, 92, 0.6) 87.63%, rgba(24, 85, 92, 0.60) 100.45%), linear-gradient(90deg, rgba(24, 85, 92, 0.90) 24.36%, rgba(24, 85, 92, 0.00) 100%);
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 87.63%, rgba(0, 0, 0, 0.6) 100.45%), linear-gradient(90deg, rgba(0, 0, 0, 0.9) 24.36%, rgba(24, 85, 92, 0.00) 100%);
 	}
 
 	.hero-btn{
