@@ -218,7 +218,7 @@ body{
 	font-weight: 600;
 	line-height: 1em;
 	text-transform: capitalize;
-	color: var(--primary-color);
+	color: var(--white-color);
 	background: var(--accent-color);
 	border-radius: 10px;
 	padding: 17px 55px 17px 20px;
@@ -872,9 +872,9 @@ header.main-header .header-sticky.active{
 	display: inline-block;
 	font-size: 28px;
 	font-weight: 600;
-	line-height: 1.2em;
+	line-height: 1.6em;
 	text-transform: capitalize;
-	color: var(--primary-color);
+	color: var(--white-color);
 }
 
 .scrolling-content span img{
@@ -7162,4 +7162,54 @@ footer.main-footer{
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+}
+
+
+/* key section css */
+.key-focus-areas {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.focus-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.focus-card:hover,
+.focus-card.active {
+    border-left: 4px solid var(--primary-color, #e6a817);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.focus-card-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary-color, #e6a817);
+    line-height: 1;
+    min-width: 50px;
+    opacity: 0.85;
+}
+
+.focus-card-content h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.focus-card-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
 }
